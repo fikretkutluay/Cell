@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     private float nextFireTime;
     private float nextSkillTime;
 
-    public bool IsDead => currentState == PlayerState.Dead;
+    public bool IsDead => stats.currentHealth <= 0;
 
     #region Unity Lifecycle
     private void Awake()
@@ -53,9 +53,21 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         inputActions.Player.Enable();
         inputActions.Player.AoESkill.performed += ctx => TryCastSkill();
+
+        if (stats != null)
+        {
+            stats.OnHealthChanged += CheckDeath;
+        }
     }
 
-    private void OnDisable() => inputActions.Player.Disable();
+    private void OnDisable()
+    {
+        inputActions.Player.Disable();
+        if(stats != null)
+        {
+            stats.OnHealthChanged -= CheckDeath;
+        }
+    }
 
     private void Update()
     {
@@ -145,24 +157,31 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount)
     {
-        if (currentState == PlayerState.Dashing || currentState == PlayerState.Dead) return;
+        stats.TakeDamage(amount);
 
-        stats.currentMaxHealth -= amount;
-        Debug.Log($"Damage Taken! Health Remains: {stats.currentMaxHealth}");
-
-        if (stats.currentMaxHealth <= 0)
+        if (stats.currentHealth <= 0)
         {
             Die();
         }
     }
     private void Die()
     {
+        CoreUIManager.Instance.ShowGameOver();
         currentState = PlayerState.Dead;
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
-
-        Debug.Log("State: DEAD - Game Over!");
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
     }
+
+    private void CheckDeath(float currentHealth, float maxHealth)
+    {
+        if (currentHealth <= 0 && currentState != PlayerState.Dead)
+        {
+            Die();
+        }
+    }
+
     #endregion
 
     private void OnDrawGizmosSelected()

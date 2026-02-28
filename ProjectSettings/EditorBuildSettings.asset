@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/_Project/_Scenes/MainMenu.unity
+    guid: 6505ef935c59d9a498cde39e10a4923f
+  - enabled: 1
+    path: Assets/_Project/_Scenes/GameplayFiko.unity
+    guid: 961c7546d1a36004f8f1882dc67e4888
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
