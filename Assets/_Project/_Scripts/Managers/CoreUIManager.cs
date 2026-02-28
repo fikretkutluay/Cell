@@ -96,10 +96,10 @@ public class CoreUIManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         isGamePaused = true;
-        gameOverMenu.SetActive(true);
+
         if (hudPanel) hudPanel.SetActive(false);
         if (pauseMenu) pauseMenu.SetActive(false);
-        if (mainMenuPanel) gameOverMenu.SetActive(true);
+        if (gameOverMenu) gameOverMenu.SetActive(true);
 
         Debug.Log("GAME OVER");
     }

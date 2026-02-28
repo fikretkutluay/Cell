@@ -16,8 +16,8 @@ MonoBehaviour:
   baseMoveSpeed: 10
   baseDamage: 10
   baseFireRate: 0.5
-  currentHealth: 105
-  maxHealth: 105
+  currentHealth: 135
+  maxHealth: 135
   currentMoveSpeed: 10
   currentDamage: 10
   currentFireRate: 0.5

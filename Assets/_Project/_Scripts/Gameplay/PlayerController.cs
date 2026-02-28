@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,6 +24,11 @@ public class PlayerController : MonoBehaviour, IDamageable
     [SerializeField] private float aoeCooldown = 5f;
     [SerializeField] private float aoeRadius = 3.5f;
 
+    [Header("Visuals")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private float skillCastDelay = 0.2f;
+    [SerializeField] private float pulseScaleAmount = 1.5f;
+
     // State Machine
     private PlayerState currentState;
     // Components
@@ -40,12 +46,10 @@ public class PlayerController : MonoBehaviour, IDamageable
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(animator == null) animator = GetComponent<Animator>();
         inputActions = new CellInput();
-
         if (mainCam == null) mainCam = Camera.main;
-
         currentState = PlayerState.Playing;
-
         if(stats != null) stats.ResetValues();
     }
 
@@ -140,6 +144,26 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         nextSkillTime = Time.time + aoeCooldown;
 
+        if (animator != null) animator.SetTrigger("Skill");
+
+        StartCoroutine(CastSkillRoutine());
+    }
+
+    private IEnumerator CastSkillRoutine()
+    {
+        Vector3 originalScale = transform.localScale;
+        Vector3 targetScale = originalScale * pulseScaleAmount;
+        float timer = 0f;
+        while (timer < skillCastDelay)
+        {
+            transform.localScale = Vector3.Lerp(originalScale, targetScale, timer / skillCastDelay);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = targetScale;
+        
+        
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, aoeRadius);
         foreach (var hit in hits)
         {
@@ -149,7 +173,16 @@ public class PlayerController : MonoBehaviour, IDamageable
                 target.TakeDamage(stats.currentDamage * 4f);
             }
         }
-        Debug.Log("AoE Skill Used");
+
+        float shrinkTimer = 0f;
+        float shrinkDuration = 0.2f;
+        while (shrinkTimer < shrinkDuration)
+        {
+            transform.localScale = Vector3.Lerp(targetScale, originalScale, shrinkTimer / shrinkDuration);
+            shrinkTimer += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = originalScale;
     }
     #endregion
 
@@ -158,11 +191,6 @@ public class PlayerController : MonoBehaviour, IDamageable
     public void TakeDamage(float amount)
     {
         stats.TakeDamage(amount);
-
-        if (stats.currentHealth <= 0)
-        {
-            Die();
-        }
     }
     private void Die()
     {
