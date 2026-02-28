@@ -302,14 +302,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreUISystem
       objectReference: {fileID: 0}
-    - target: {fileID: 4689382464580822324, guid: 96626c7d5ceb11047883d951642be386, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5938026318531874836, guid: 96626c7d5ceb11047883d951642be386, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7425058831425210418, guid: 96626c7d5ceb11047883d951642be386, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -388,10 +380,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425058831425210418, guid: 96626c7d5ceb11047883d951642be386, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7656959424763622071, guid: 96626c7d5ceb11047883d951642be386, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

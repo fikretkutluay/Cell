@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0b18386f90f7a314bb6d0fd4601bc56a
+guid: d160f99b5e6edcb4a9adf86662852cbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2455513822275430761
-    second: top_0
+      213: -5911136785090452940
+    second: alyuvar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: top_0
+      name: alyuvar_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 14
-        height: 13
+        x: 2
+        y: 4
+        width: 28
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 969e9cdbfccb31220800000000000000
-      internalID: 2455513822275430761
+      spriteID: 43260f9996c67fda0800000000000000
+      internalID: -5911136785090452940
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      top_0: 2455513822275430761
+      alyuvar_0: -5911136785090452940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
