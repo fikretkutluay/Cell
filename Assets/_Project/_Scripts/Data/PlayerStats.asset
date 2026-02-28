@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baec82d2b1651e9449511bf9defce7d5, type: 3}
+  m_Name: PlayerStats
+  m_EditorClassIdentifier: 
+  baseMaxHealth: 100
+  baseMoveSpeed: 10
+  baseDamage: 10
+  baseFireRate: 0.5
+  currentMaxHealth: 100
+  currentMoveSpeed: 10
+  currentDamage: 10
+  currentFireRate: 0.5
