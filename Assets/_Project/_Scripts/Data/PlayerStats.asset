@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baec82d2b1651e9449511bf9defce7d5, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  baseMaxHealth: 100
-  baseMoveSpeed: 10
-  baseDamage: 10
+  baseMaxHealth: 200
+  baseMoveSpeed: 12
+  baseDamage: 15
   baseFireRate: 0.5
-  currentHealth: 135
-  maxHealth: 135
+  currentHealth: 100
+  maxHealth: 100
   currentMoveSpeed: 10
   currentDamage: 10
   currentFireRate: 0.5

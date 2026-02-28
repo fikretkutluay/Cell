@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2631517078204771094}
   - component: {fileID: -5923398454702994418}
   m_Layer: 0
-  m_Name: DNA_Item
+  m_Name: Speed_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.93962264, g: 0.673002, b: 0, a: 1}
+  m_Sprite: {fileID: -721253127325188216, guid: 0a2634746b0e9004eb7b363f8f608089, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsToUpgrade: {fileID: 11400000, guid: bc8b72d12902c7b4cb2ac632d9ab91ba, type: 2}
-  upgradeType: 4
-  amount: 5
+  upgradeType: 1
+  amount: 0.5
   pickupEffect: {fileID: 0}
 --- !u!61 &-5923398454702994418
 BoxCollider2D:
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.4375, y: 0.8125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
