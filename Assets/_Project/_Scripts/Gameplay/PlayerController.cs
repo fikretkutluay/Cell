@@ -50,7 +50,12 @@ public class PlayerController : MonoBehaviour, IDamageable
         inputActions = new CellInput();
         if (mainCam == null) mainCam = Camera.main;
         currentState = PlayerState.Playing;
-        if(stats != null) stats.ResetValues();
+        
+        // Stats'ı sadece GameProgressManager yoksa veya progress yoksa reset et
+        if (GameProgressManager.Instance == null || !Application.isPlaying)
+        {
+            if(stats != null) stats.ResetValues();
+        }
     }
 
     private void OnEnable()

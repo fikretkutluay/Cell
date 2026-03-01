@@ -12,7 +12,1081 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49780e1fbb61880459aae414bf91454b, type: 3}
   m_Name: Level1_LungsData
   m_EditorClassIdentifier: 
-  nodes: []
-  references:
-    version: 2
-    RefIds: []
+  nodes:
+  - position: {x: -54.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 14.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -54.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -50.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -44.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -40.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -34.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -30.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -24.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -20.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 14.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 34.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -14.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -10.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -10.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -10.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -10.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -10.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -45.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 34.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -4.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: -0.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -45.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 14.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 34.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 5.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 9.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 9.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 9.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 9.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -45.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 15.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 19.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 34.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 25.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 29.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -45.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 34.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 35.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 39.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 45.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 49.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -69.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -65.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -59.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -55.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -49.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -45.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -39.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -35.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -29.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -25.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -19.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -15.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -9.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: -5.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 0.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 4.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 10.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 20.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 24.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 30.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 40.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 44.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 50.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 54.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 60.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 64.5}
+    neighborIndices: 
+    isDeadEnd: 0
+  - position: {x: 55.5, y: 70.5}
+    neighborIndices: 
+    isDeadEnd: 0

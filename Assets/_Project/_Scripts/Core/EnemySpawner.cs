@@ -3,21 +3,21 @@ using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [Header("Üretim Ayarlarý")]
-    public GameObject enemyPrefab; // Akyuvar Prefab'ýmýz
-    public int enemyCount = 50;     // Haritada kaç tane düþman olacak?
+    [Header("ï¿½retim Ayarlarï¿½")]
+    public GameObject enemyPrefab; // Akyuvar Prefab'ï¿½mï¿½z
+    public int enemyCount = 50;     // Haritada kaï¿½ tane dï¿½ï¿½man olacak?
 
     [Header("Referanslar")]
-    public GraphData graphData;    // Düðümlerin yerini bilmek için
-    public Transform player;       // Düþmanlara oyuncuyu hedef göstermek için
+    public GraphData graphData;    // Dï¿½ï¿½ï¿½mlerin yerini bilmek iï¿½in
+    public Transform player;       // Dï¿½ï¿½manlara oyuncuyu hedef gï¿½stermek iï¿½in
 
-    [Header("Güvenlik")]
-    [Tooltip("Düþmanlar oyuncunun en az bu kadar uzaðýnda doðmalý ki anýnda ölme")]
+    [Header("Gï¿½venlik")]
+    [Tooltip("Dï¿½ï¿½manlar oyuncunun en az bu kadar uzaï¿½ï¿½nda doï¿½malï¿½ ki anï¿½nda ï¿½lme")]
     public float safeDistanceFromPlayer = 10f;
 
     private void Start()
     {
-        // Oyun baþladýðý anda düþmanlarý haritaya daðýt
+        // Oyun baï¿½ladï¿½ï¿½ï¿½ anda dï¿½ï¿½manlarï¿½ haritaya daï¿½ï¿½t
         SpawnEnemies();
     }
 
@@ -25,43 +25,44 @@ public class EnemySpawner : MonoBehaviour
     {
         if (graphData == null || graphData.nodes.Count == 0 || enemyPrefab == null)
         {
-            Debug.LogWarning("Spawner eksik referans veya boþ GraphData yüzünden çalýþamadý!");
+            Debug.LogWarning("Spawner eksik referans veya boï¿½ GraphData yï¿½zï¿½nden ï¿½alï¿½ï¿½amadï¿½!");
             return;
         }
 
         int spawned = 0;
-        int attempts = 0; // Sonsuz döngüye girmemek için güvenlik
+        int attempts = 0; // Sonsuz dï¿½ngï¿½ye girmemek iï¿½in gï¿½venlik
 
         while (spawned < enemyCount && attempts < 1000)
         {
             attempts++;
 
-            // GraphData içinden rastgele bir düðüm (Node) seç
+            // GraphData iï¿½inden rastgele bir dï¿½ï¿½ï¿½m (Node) seï¿½
             int randomIndex = Random.Range(0, graphData.nodes.Count);
             GraphNode randomNode = graphData.nodes[randomIndex];
 
-            // Seçilen düðüm oyuncuya çok mu yakýn? Öyleyse baþka bir tane seç (continue)
+            // Seï¿½ilen dï¿½ï¿½ï¿½m oyuncuya ï¿½ok mu yakï¿½n? ï¿½yleyse baï¿½ka bir tane seï¿½ (continue)
             if (player != null && Vector2.Distance(randomNode.position, player.position) < safeDistanceFromPlayer)
             {
                 continue;
             }
 
-            // Güvenli bir düðüm bulundu! Oraya düþmaný (Akyuvar) yarat
+            // Gï¿½venli bir dï¿½ï¿½ï¿½m bulundu! Oraya dï¿½ï¿½manï¿½ (Akyuvar) yarat
             GameObject newEnemy = Instantiate(enemyPrefab, randomNode.position, Quaternion.identity);
 
-            // Yaratýlan bu yeni düþmanýn beynine (AI) gerekli verileri yükle
+            // Yaratï¿½lan bu yeni dï¿½ï¿½manï¿½n beynine (AI) player referansï¿½nï¿½ yï¿½kle
+            // NOT: graphData artï¿½k otomatik olarak GraphManager'dan alï¿½nï¿½yor
             LeukocyteAI aiScript = newEnemy.GetComponent<LeukocyteAI>();
             if (aiScript != null)
             {
-                aiScript.graphData = graphData;
+                // graphData artï¿½k otomatik bulunuyor, manuel atamaya gerek yok
                 aiScript.player = player;
 
-                // Bölüm 1 için Ambush kapalý kalabilir, ilerleyen bölümlerde açýlabilir.
+                // Bï¿½lï¿½m 1 iï¿½in Ambush kapalï¿½ kalabilir, ilerleyen bï¿½lï¿½mlerde aï¿½ï¿½labilir.
             }
 
             spawned++;
         }
 
-        Debug.Log($"[Spawner] Haritaya baþarýyla {spawned} adet Akyuvar yerleþtirildi!");
+        Debug.Log($"[Spawner] Haritaya baï¿½arï¿½yla {spawned} adet Akyuvar yerleï¿½tirildi!");
     }
 }

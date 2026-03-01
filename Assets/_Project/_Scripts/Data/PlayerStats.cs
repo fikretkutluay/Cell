@@ -21,20 +21,20 @@ public class PlayerStats : ScriptableObject
     {
         Heal(10);
     }
-    [Header("Temel Deðerler (Baþlangýç)")]
+    [Header("Temel Deï¿½erler (Baï¿½langï¿½ï¿½)")]
     public float baseMaxHealth = 100f;
     public float baseMoveSpeed = 5f;
     public float baseDamage = 10f;
     public float baseFireRate = 0.5f;
 
-    [Header("Anlýk Deðerler (Oyun Ýçi)")]
+    [Header("Anlï¿½k Deï¿½erler (Oyun ï¿½ï¿½i)")]
     public float currentHealth;
     public float maxHealth;
     public float currentMoveSpeed;
     public float currentDamage;
     public float currentFireRate;
 
-    // Oyun baþladýðýnda veya öldüðümüzde deðerleri sýfýrlamak için
+    // Oyun baï¿½ladï¿½ï¿½ï¿½nda veya ï¿½ldï¿½ï¿½ï¿½mï¿½zde deï¿½erleri sï¿½fï¿½rlamak iï¿½in
     public void ResetValues()
     {
         maxHealth = baseMaxHealth;
@@ -92,4 +92,12 @@ public class PlayerStats : ScriptableObject
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
+    /// <summary>
+    /// StatlarÄ± harici bir yerden gÃ¼ncellemek iÃ§in (GameProgressManager iÃ§in)
+    /// </summary>
+    public void NotifyStatsChanged()
+    {
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        OnStatsChanged?.Invoke();
+    }
 }

@@ -7,6 +7,8 @@ public class PathfinderAStar : MonoBehaviour
     {
         if (startNode == null || targetNode == null) return null;
 
+        if (startNode == targetNode) return new List<GraphNode>();
+
         List<GraphNode> openSet = new List<GraphNode>();
         HashSet<GraphNode> closedSet = new HashSet<GraphNode>();
 
@@ -21,7 +23,7 @@ public class PathfinderAStar : MonoBehaviour
         while (openSet.Count > 0)
         {
             GraphNode currentNode = openSet[0];
-            for (int i = 0; i < openSet.Count; i++)
+            for (int i = 1; i < openSet.Count; i++)
             {
                 if (fCost.ContainsKey(openSet[i]) && fCost.ContainsKey(currentNode))
                 {
@@ -52,15 +54,14 @@ public class PathfinderAStar : MonoBehaviour
                     cameFrom[neighbor] = currentNode;
                     gCost[neighbor] = tentativeGCost;
                     fCost[neighbor] = tentativeGCost + Vector2.Distance(neighbor.position, targetNode.position);
-                }
 
-                if (!openSet.Contains(neighbor))
-                    openSet.Add(neighbor);
+                    if (!openSet.Contains(neighbor))
+                        openSet.Add(neighbor);
+                }
             }
         }
 
-        return null;
-
+        return null; 
     }
 
     private static List<GraphNode> RetracePath(GraphNode startNode, GraphNode endNode, Dictionary<GraphNode, GraphNode> cameFrom)
@@ -68,7 +69,8 @@ public class PathfinderAStar : MonoBehaviour
         List<GraphNode> path = new List<GraphNode>();
         GraphNode currentNode = endNode;
 
-        while (currentNode != startNode) {
+        while (currentNode != startNode)
+        {
             path.Add(currentNode);
             if (cameFrom.ContainsKey(currentNode))
                 currentNode = cameFrom[currentNode];

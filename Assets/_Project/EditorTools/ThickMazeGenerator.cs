@@ -2,46 +2,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+#if UNITY_EDITOR
+using UnityEditor; // Verileri diske kaydetmek iï¿½in gerekli
+#endif
+
 public class ThickMazeGenerator : MonoBehaviour
 {
-    [Header("Tilemap Referansý")]
+    [Header("Tilemap Referansï¿½")]
     public Tilemap mazeTilemap;
 
-    [Header("Köþe Tile'larý")]
+    [Header("Kï¿½ï¿½e Tile'larï¿½")]
     public TileBase koseSolUst;
     public TileBase koseSagUst;
     public TileBase koseSolAlt;
     public TileBase koseSagAlt;
 
-    [Header("Kenar ve Ýç Tile'lar")]
+    [Header("Kenar ve ï¿½ï¿½ Tile'lar")]
     public TileBase ortaTileAlt;
     public TileBase ortaTileUst;
     public TileBase ortaTileSol;
     public TileBase ortaTileSag;
-    public TileBase tamTile; // Ýçi tamamen dolu duvar parçasý
+    public TileBase tamTile;
 
-    [Header("Baþlangýç ve Bitiþ Zemin/Portal Tile'larý")]
+    [Header("Baï¿½langï¿½ï¿½ ve Bitiï¿½ Zemin/Portal Tile'larï¿½")]
     public TileBase startTile;
     public TileBase endTile;
 
-    [Header("Harita Boyut ve Kalýnlýk Ayarlarý")]
+    [Header("Harita Boyut ve Kalï¿½nlï¿½k Ayarlarï¿½")]
     public int width = 21;
     public int height = 21;
-
-    [Tooltip("Sadece duvarlarý oluþturan iskeletin kalýnlýðý (Örn: 1 veya 2)")]
     public int wallThickness = 1;
-
-    [Tooltip("Ýçinde yürüyeceðin yollarýn geniþliði (Örn: 3 veya 4)")]
     public int pathThickness = 4;
 
     [Header("Yapay Zeka (Graph) Otomasyonu")]
-    public GraphData graphData; // A* düðümlerini otomatik kaydedeceðimiz dosya
+    public GraphData graphData; // Kendi yazdï¿½ï¿½ï¿½mï¿½z A* veri dosyasï¿½
 
     private bool[,] physicalMaze;
     private int physWidth;
     private int physHeight;
 
-    [ContextMenu("Haritayý Oluþtur (Tam Otomasyon)")]
+    [ContextMenu("Haritayï¿½ Oluï¿½tur (Tam Otomasyon)")]
     public void GenerateThickMaze()
     {
         mazeTilemap.ClearAllTiles();
@@ -51,16 +51,12 @@ public class ThickMazeGenerator : MonoBehaviour
 
         int[,] logicalMaze = new int[width, height];
 
-        // ---------------------------------------------------------
-        // 1. AÞAMA: Mantýksal Haritayý Duvarla Doldur
-        // ---------------------------------------------------------
+        // 1. Aï¿½AMA: Mantï¿½ksal Haritayï¿½ Duvarla Doldur
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
                 logicalMaze[x, y] = 1;
 
-        // ---------------------------------------------------------
-        // 2. AÞAMA: DFS Algoritmasý ile Ýnce Labirenti Kazý
-        // ---------------------------------------------------------
+        // 2. Aï¿½AMA: DFS Algoritmasï¿½ ile ï¿½nce Labirenti Kazï¿½
         Stack<Vector2Int> stack = new Stack<Vector2Int>();
 
         Vector2Int startPoint = new Vector2Int(1, height - 2);
@@ -107,9 +103,7 @@ public class ThickMazeGenerator : MonoBehaviour
         Vector2Int endPoint = new Vector2Int(width - 2, 1);
         logicalMaze[endPoint.x, endPoint.y] = 0;
 
-        // ---------------------------------------------------------
-        // 3. AÞAMA: Baðýmsýz Kalýnlýklarý Uygulayarak Fiziksel Haritayý Çýkar
-        // ---------------------------------------------------------
+        // 3. Aï¿½AMA: Baï¿½ï¿½msï¿½z Kalï¿½nlï¿½klarï¿½ Uygulayarak Fiziksel Haritayï¿½ ï¿½ï¿½kar
         physWidth = (width / 2) * pathThickness + ((width + 1) / 2) * wallThickness;
         physHeight = (height / 2) * pathThickness + ((height + 1) / 2) * wallThickness;
         physicalMaze = new bool[physWidth, physHeight];
@@ -137,9 +131,7 @@ public class ThickMazeGenerator : MonoBehaviour
             }
         }
 
-        // ---------------------------------------------------------
-        // 4. AÞAMA: AUTO-TILING ÇÝZÝMÝ
-        // ---------------------------------------------------------
+        // 4. Aï¿½AMA: AUTO-TILING ï¿½ï¿½Zï¿½Mï¿½
         for (int px = 0; px < physWidth; px++)
         {
             for (int py = 0; py < physHeight; py++)
@@ -169,9 +161,7 @@ public class ThickMazeGenerator : MonoBehaviour
             }
         }
 
-        // ---------------------------------------------------------
-        // 5. AÞAMA: Baþlangýç, Bitiþ ve Karakter Iþýnlama
-        // ---------------------------------------------------------
+        // 5. Aï¿½AMA: Baï¿½langï¿½ï¿½, Bitiï¿½ ve Karakter Iï¿½ï¿½nlama
         int startPhysX = (startPoint.x / 2) * pathThickness + ((startPoint.x + 1) / 2) * wallThickness;
         int startPhysY = (startPoint.y / 2) * pathThickness + ((startPoint.y + 1) / 2) * wallThickness;
         int finalStartPx = startPhysX + (pathThickness / 2) - (physWidth / 2);
@@ -193,14 +183,13 @@ public class ThickMazeGenerator : MonoBehaviour
             playerObj.transform.position = new Vector3(worldPos.x, worldPos.y, playerObj.transform.position.z);
         }
 
-        // ---------------------------------------------------------
-        // 6. AÞAMA: GRAPH (YAPAY ZEKA DÜÐÜM) OTOMASYONU
-        // ---------------------------------------------------------
+        // 6. Aï¿½AMA: KENDï¿½ GRAPH Sï¿½STEMï¿½Mï¿½Zï¿½ OTOMATï¿½K DOLDURMA
         if (graphData != null)
         {
             graphData.nodes.Clear();
             GraphNode[,] nodeGrid = new GraphNode[width, height];
 
+            // ï¿½nce tï¿½m node'larï¿½ oluï¿½tur
             for (int x = 0; x < width; x++)
             {
                 for (int y = 0; y < height; y++)
@@ -217,7 +206,6 @@ public class ThickMazeGenerator : MonoBehaviour
 
                         GraphNode newNode = new GraphNode();
                         newNode.position = new Vector2(worldPos.x, worldPos.y);
-                        newNode.neighbors = new List<GraphNode>();
 
                         nodeGrid[x, y] = newNode;
                         graphData.nodes.Add(newNode);
@@ -225,6 +213,7 @@ public class ThickMazeGenerator : MonoBehaviour
                 }
             }
 
+            // Sonra index'leri kullanarak baï¿½lantï¿½larï¿½ oluï¿½tur
             for (int x = 0; x < width; x++)
             {
                 for (int y = 0; y < height; y++)
@@ -232,21 +221,85 @@ public class ThickMazeGenerator : MonoBehaviour
                     GraphNode current = nodeGrid[x, y];
                     if (current != null)
                     {
-                        if (y + 1 < height && nodeGrid[x, y + 1] != null) current.neighbors.Add(nodeGrid[x, y + 1]);
-                        if (y - 1 >= 0 && nodeGrid[x, y - 1] != null) current.neighbors.Add(nodeGrid[x, y - 1]);
-                        if (x + 1 < width && nodeGrid[x + 1, y] != null) current.neighbors.Add(nodeGrid[x + 1, y]);
-                        if (x - 1 >= 0 && nodeGrid[x - 1, y] != null) current.neighbors.Add(nodeGrid[x - 1, y]);
+                        // Komï¿½ularï¿½ kontrol et ve index'lerini ekle
+                        if (y + 1 < height && nodeGrid[x, y + 1] != null)
+                        {
+                            int neighborIndex = graphData.nodes.IndexOf(nodeGrid[x, y + 1]);
+                            if (!current.neighborIndices.Contains(neighborIndex))
+                                current.neighborIndices.Add(neighborIndex);
+                        }
+
+                        if (y - 1 >= 0 && nodeGrid[x, y - 1] != null)
+                        {
+                            int neighborIndex = graphData.nodes.IndexOf(nodeGrid[x, y - 1]);
+                            if (!current.neighborIndices.Contains(neighborIndex))
+                                current.neighborIndices.Add(neighborIndex);
+                        }
+
+                        if (x + 1 < width && nodeGrid[x + 1, y] != null)
+                        {
+                            int neighborIndex = graphData.nodes.IndexOf(nodeGrid[x + 1, y]);
+                            if (!current.neighborIndices.Contains(neighborIndex))
+                                current.neighborIndices.Add(neighborIndex);
+                        }
+
+                        if (x - 1 >= 0 && nodeGrid[x - 1, y] != null)
+                        {
+                            int neighborIndex = graphData.nodes.IndexOf(nodeGrid[x - 1, y]);
+                            if (!current.neighborIndices.Contains(neighborIndex))
+                                current.neighborIndices.Add(neighborIndex);
+                        }
                     }
                 }
             }
+
+            // Runtime neighbor listelerini oluï¿½tur
+            graphData.RebuildNeighborReferences();
         }
 
-        Debug.Log($"Harita Üretildi! Duvar: {wallThickness}, Yol: {pathThickness}. Graph Nodelarý baðlandý!");
+        Debug.Log($"Harita ï¿½retildi! Duvar: {wallThickness}, Yol: {pathThickness}. Graph Nodelarï¿½ baï¿½landï¿½!");
+
+        // KRï¿½Tï¿½K EKLENTï¿½: Verilerin Play'e basï¿½nca silinmemesi iï¿½in diske zorla kaydetme (Serialization)
+#if UNITY_EDITOR
+        if (graphData != null)
+        {
+            EditorUtility.SetDirty(graphData);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"GraphData saved with {graphData.nodes.Count} nodes!");
+        }
+#endif
     }
 
     private bool IsWall(int x, int y)
     {
         if (x < 0 || x >= physWidth || y < 0 || y >= physHeight) return true;
         return physicalMaze[x, y];
+    }
+
+    // EKLENEN KISIM: Nodelarï¿½ ve aralarï¿½ndaki yollarï¿½ sahnede gï¿½rsel olarak ï¿½izmemizi saï¿½lar
+    private void OnDrawGizmos()
+    {
+        if (graphData != null && graphData.nodes != null)
+        {
+            foreach (var node in graphData.nodes)
+            {
+                // Dï¿½ï¿½ï¿½mleri cyan (aï¿½ï¿½k mavi) renkli toplar olarak ï¿½iz
+                Gizmos.color = Color.cyan;
+                Gizmos.DrawSphere(new Vector3(node.position.x, node.position.y, 0), 0.2f);
+
+                // Komï¿½ularla arasï¿½ndaki yollarï¿½ sarï¿½ ï¿½izgiyle baï¿½la
+                if (node.neighbors != null)
+                {
+                    Gizmos.color = Color.yellow;
+                    foreach (var neighbor in node.neighbors)
+                    {
+                        Gizmos.DrawLine(
+                            new Vector3(node.position.x, node.position.y, 0),
+                            new Vector3(neighbor.position.x, neighbor.position.y, 0)
+                        );
+                    }
+                }
+            }
+        }
     }
 }

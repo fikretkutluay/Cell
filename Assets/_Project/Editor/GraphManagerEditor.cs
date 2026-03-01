@@ -22,6 +22,8 @@ public class GraphManagerEditor : Editor
             manager.graphData.nodes.Add(newNode);
 
             EditorUtility.SetDirty(manager.graphData);
+            AssetDatabase.SaveAssets();
+            Debug.Log($"Node added at {worldPosition}. Total nodes: {manager.graphData.nodes.Count}");
         }
 
         else if (e.type == EventType.MouseDown && e.button == 0 && !e.shift)
@@ -40,13 +42,26 @@ public class GraphManagerEditor : Editor
             if (targetNode != null && manager.selectedNode != null && targetNode != manager.selectedNode)
             {
                 e.Use();
-                if (!manager.selectedNode.neighbors.Contains(targetNode))
-                {
-                    manager.selectedNode.neighbors.Add(targetNode);
-                    targetNode.neighbors.Add(manager.selectedNode);
+                
+                int selectedIndex = manager.graphData.nodes.IndexOf(manager.selectedNode);
+                int targetIndex = manager.graphData.nodes.IndexOf(targetNode);
 
-                    EditorUtility.SetDirty(manager.graphData);
-                    SceneView.RepaintAll();
+                if (selectedIndex >= 0 && targetIndex >= 0)
+                {
+                    // Index'leri kullanarak bağlantı oluştur
+                    if (!manager.selectedNode.neighborIndices.Contains(targetIndex))
+                    {
+                        manager.selectedNode.neighborIndices.Add(targetIndex);
+                        targetNode.neighborIndices.Add(selectedIndex);
+
+                        // Runtime neighbor listelerini de güncelle
+                        manager.graphData.RebuildNeighborReferences();
+
+                        EditorUtility.SetDirty(manager.graphData);
+                        AssetDatabase.SaveAssets();
+                        Debug.Log($"Connection created between node {selectedIndex} and {targetIndex}");
+                        SceneView.RepaintAll();
+                    }
                 }
             }
         }

@@ -8,7 +8,7 @@ public class CoreUIManager : MonoBehaviour
 
     [Header("Panels")]
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject hudPanel;       // StatsUI bu panelin içinde olacak
+    [SerializeField] private GameObject hudPanel;       // StatsUI bu panelin iï¿½inde olacak
     [SerializeField] private GameObject gameOverMenu;
     [SerializeField] private GameObject mainMenuPanel;
 
@@ -17,27 +17,39 @@ public class CoreUIManager : MonoBehaviour
 
     private void Awake()
     {
+        // Singleton pattern - sadece bir instance olmalÄ±
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+        
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        inputActions = new CellInput();
+        // Input actions'Ä± oluÅŸtur
+        if (inputActions == null)
+        {
+            inputActions = new CellInput();
+        }
     }
 
     private void OnEnable()
     {
-        inputActions.Enable();
-        inputActions.Player.Pause.performed += ctx => TogglePause();
+        if (inputActions != null)
+        {
+            inputActions.Enable();
+            inputActions.Player.Pause.performed += ctx => TogglePause();
+        }
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
-        inputActions.Disable();
+        if (inputActions != null)
+        {
+            inputActions.Disable();
+        }
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
@@ -47,18 +59,21 @@ public class CoreUIManager : MonoBehaviour
         isGamePaused = false;
         HideAllPanels();
 
-        // Ana menüdeysek MainMenu paneli, deðilsek HUD açýlsýn
+        // Ana menÃ¼deysek MainMenu paneli, deÄŸilsek HUD aÃ§Ä±lsÄ±n
         if (scene.name == "MainMenu")
         {
             if (mainMenuPanel) mainMenuPanel.SetActive(true);
-            Cursor.visible = true; // Menüde mouse görünsün
+            Cursor.visible = true; // MenÃ¼de mouse gÃ¶rÃ¼nsÃ¼n
         }
         else
         {
             if (hudPanel) hudPanel.SetActive(true);
-            // Oyun içinde mouse niþan almak için gerekliyse açýk kalsýn,
-            // deðilse gizleyebilirsin: Cursor.visible = false;
+            // Oyun iÃ§inde mouse niÅŸan almak iÃ§in gerekliyse aÃ§Ä±k kalsÄ±n,
+            // deÄŸilse gizleyebilirsin: Cursor.visible = false;
         }
+
+        // NOT: LevelExit panelleri kendi scriptleri tarafÄ±ndan yÃ¶netilir
+        // Bu yÃ¼zden burada onlarÄ± kapatmÄ±yoruz
     }
 
     private void HideAllPanels()
@@ -71,14 +86,14 @@ public class CoreUIManager : MonoBehaviour
 
     private void TogglePause()
     {
-        // Ana menüdeysek veya Oyun bittiyse pause çalýþmasýn
+        // Ana menï¿½deysek veya Oyun bittiyse pause ï¿½alï¿½ï¿½masï¿½n
         if (SceneManager.GetActiveScene().name == "MainMenu" || (gameOverMenu != null && gameOverMenu.activeSelf)) return;
 
         isGamePaused = !isGamePaused;
 
         if (pauseMenu != null) pauseMenu.SetActive(isGamePaused);
 
-        // Pause açýlýnca HUD gizlensin mi? Genelde kalabilir ama gizlemek istersen:
+        // Pause aï¿½ï¿½lï¿½nca HUD gizlensin mi? Genelde kalabilir ama gizlemek istersen:
         // if (hudPanel != null) hudPanel.SetActive(!isGamePaused); 
 
         Time.timeScale = isGamePaused ? 0f : 1f;
@@ -103,7 +118,7 @@ public class CoreUIManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Level 1'i yükle (Build Settings'de 1. sýrada Lung olmalý)
+        // Level 1'i yï¿½kle (Build Settings'de 1. sï¿½rada Lung olmalï¿½)
         SceneManager.LoadScene(1);
     }
 
@@ -122,7 +137,7 @@ public class CoreUIManager : MonoBehaviour
         if (pauseMenu) pauseMenu.SetActive(false);
         if (gameOverMenu) gameOverMenu.SetActive(true);
 
-        Cursor.visible = true; // Butonlara basmak için mouse aç
+        Cursor.visible = true; // Butonlara basmak iï¿½in mouse aï¿½
         Debug.Log("GAME OVER");
     }
 }
