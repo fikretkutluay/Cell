@@ -25,7 +25,7 @@ public class CoreUIManager : MonoBehaviour
         }
         
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         // Input actions'ı oluştur
         if (inputActions == null)

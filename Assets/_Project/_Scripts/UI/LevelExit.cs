@@ -139,20 +139,4 @@ public class LevelExit : MonoBehaviour
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
     }
-
-    // Alternatif: Direkt sahne geçişi (panel olmadan)
-    public void GoToNextLevelDirect()
-    {
-        if (GameProgressManager.Instance != null)
-        {
-            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            GameProgressManager.Instance.LoadNextScene(nextSceneIndex);
-        }
-        else
-        {
-            Debug.LogWarning("GameProgressManager not found! Loading scene without saving stats.");
-            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-    }
 }
